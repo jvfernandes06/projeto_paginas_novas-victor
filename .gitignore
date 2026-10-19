@@ -1,0 +1,12 @@
+# O banco tem dado sensível: nunca vai para o repositório.
+dados/
+backups/
+*.db
+*.db-wal
+*.db-shm
+
+.env
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/

@@ -1,0 +1,16 @@
+# Identidade da Páginas Novas: preto, branco e laranja.
+# Tema fixo em claro porque os gráficos foram validados sobre fundo claro.
+[theme]
+base = "light"
+primaryColor = "#eb6834"
+backgroundColor = "#ffffff"
+secondaryBackgroundColor = "#faf7f4"
+textColor = "#0b0b0b"
+font = "sans serif"
+
+[server]
+headless = true
+maxUploadSize = 2
+
+[browser]
+gatherUsageStats = false

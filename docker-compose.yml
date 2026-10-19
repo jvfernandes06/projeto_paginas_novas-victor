@@ -1,0 +1,21 @@
+# Sobe tudo com um comando:  docker compose up
+#
+# O volume "dados" guarda o banco e os backups. Ele sobrevive a parar, atualizar e
+# recriar o container: é o único lugar onde ficam as informações da ONG.
+services:
+  app:
+    build: .
+    ports:
+      - "8501:8501"
+    volumes:
+      - dados:/dados
+    environment:
+      # 1 = cria 300 pessoas e 18 meses de atividades fictícias na primeira subida.
+      # Troque para 0 antes de a ONG começar a usar de verdade.
+      PN_SEED_DEMO: "1"
+      PN_INTERVALO_ATUALIZACAO: "60"
+      PN_MINUTOS_INATIVIDADE: "30"
+    restart: unless-stopped
+
+volumes:
+  dados:
